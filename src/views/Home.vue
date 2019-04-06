@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div>
+		<SSMS />
+	</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import EvalutionEdition from '@/components/sqldb/install/windows/EvalutionEdition';
+import SSMS from '@/components/sqldb/install/windows/SSMS'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+	name: 'home',
+	components: {
+		EvalutionEdition,
+		SSMS
+	},
+	beforeMount(){
+		
+	},
+	methods: {
+
+	}
 }
 </script>

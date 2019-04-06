@@ -1,31 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="wrapper">
+		<SideBar />
+		<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<TopBar v-if="false"/>
+				<div class="container-fluid">
+					<router-view/>
+				</div>
+			</div>
+			 
+			
+		</div>
+		
+	</div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+import SideBar from './components/layouts/SideBar';
+import TopBar from './components/layouts/TopBar';
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+export default {
+	name: 'App',
+	components: {
+		SideBar,
+		TopBar
+	},
+	data () {
+		return {
+			
+		}
+	},
+	methods: {
+		
+	}
 }
-</style>
+</script>
+
+
